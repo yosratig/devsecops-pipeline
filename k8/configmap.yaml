@@ -6,3 +6,4 @@ data:
   application.properties: |
     management.endpoint.prometheus.access=unrestricted
     management.prometheus.metrics.export.enabled=true
+    management.metrics.export.prometheus.enabled=false
