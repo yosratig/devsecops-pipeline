@@ -16,14 +16,9 @@ spec:
       - name: webgoat
         image: yosratig/webgoat:latest
         args:
-        - "--spring.config.additional-location=file:/home/webgoat/config/"
+        - "--spring.config.location=classpath:/,file:/home/webgoat/config/"
         ports:
         - containerPort: 8080
-        env:
-        - name: MANAGEMENT_ENDPOINT_PROMETHEUS_ACCESS
-          value: "unrestricted"
-        - name: MANAGEMENT_PROMETHEUS_METRICS_EXPORT_ENABLED
-          value: "true"
         volumeMounts:
         - name: props
           mountPath: /home/webgoat/config
