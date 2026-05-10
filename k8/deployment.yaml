@@ -22,3 +22,13 @@ spec:
           value: "unrestricted"
         - name: MANAGEMENT_PROMETHEUS_METRICS_EXPORT_ENABLED
           value: "true"
+        volumeMounts:
+        - name: props
+          mountPath: /home/webgoat/config
+      volumes:
+      - name: props
+        configMap:
+          name: webgoat-props
+          items:
+          - key: application.properties
+            path: application.properties
