@@ -4,7 +4,6 @@ metadata:
   name: webgoat-ingress
   annotations:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
-    nginx.ingress.kubernetes.io/rewrite-target: /WebGoat
 spec:
   tls:
   - hosts:
@@ -14,7 +13,7 @@ spec:
   - host: webgoat.local
     http:
       paths:
-      - path: /
+      - path: /WebGoat
         pathType: Prefix
         backend:
           service:
