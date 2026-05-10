@@ -1,8 +1,1 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: webgoat-props
-data:
-  application.properties: |
-    management.endpoint.prometheus.access=unrestricted
-    management.prometheus.metrics.export.enabled=true
+
