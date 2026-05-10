@@ -17,3 +17,8 @@ spec:
         image: yosratig/webgoat:latest
         ports:
         - containerPort: 8080
+        env:
+        - name: MANAGEMENT_ENDPOINT_PROMETHEUS_ACCESS
+          value: "unrestricted"
+        - name: MANAGEMENT_PROMETHEUS_METRICS_EXPORT_ENABLED
+          value: "true"
