@@ -15,17 +15,5 @@ spec:
       containers:
       - name: webgoat
         image: yosratig/webgoat:latest
-        args:
-        - "--spring.config.location=classpath:/,file:/home/webgoat/config/"
         ports:
         - containerPort: 8080
-        volumeMounts:
-        - name: props
-          mountPath: /home/webgoat/config
-      volumes:
-      - name: props
-        configMap:
-          name: webgoat-props
-          items:
-          - key: application.properties
-            path: application.properties
