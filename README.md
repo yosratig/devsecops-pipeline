@@ -97,6 +97,4 @@ Cette approche permet de :
 
 ---
 
-## 📄 Licence
 
-*(À préciser : MIT, GPL, etc.)*
